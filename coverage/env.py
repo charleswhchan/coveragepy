@@ -137,6 +137,10 @@ class PYBEHAVIOR:
     # only a 0-number line, which is ignored, giving a truly empty module.
     empty_is_empty = (PYVERSION >= (3, 11, 0, "beta", 4))
 
+    # PEP669 Low Impact Monitoring: https://peps.python.org/pep-0669/
+    pep669 = bool(getattr(sys, "monitoring", None))
+
+
 # Coverage.py specifics.
 
 # Are we using the C-implemented trace function?
